@@ -1,0 +1,25 @@
+[INFO    :   django.utils.autoreload] - 2024-01-18 16:48:44,820 : run_with_reloader @0668: Watching for file changes with StatReloader
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:13:13,827 : run_with_reloader @0668: Watching for file changes with StatReloader
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:14:16,260 : trigger_reload @0266: C:\Users\User\Desktop\django\app1\views.py changed, reloading.
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:14:17,079 : run_with_reloader @0668: Watching for file changes with StatReloader
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:14:29,688 : run_with_reloader @0668: Watching for file changes with StatReloader
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:15:10,747 : run_with_reloader @0668: Watching for file changes with StatReloader
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:16:20,056 : run_with_reloader @0668: Watching for file changes with StatReloader
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:17:45,278 : run_with_reloader @0668: Watching for file changes with StatReloader
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:20:01,413 : run_with_reloader @0668: Watching for file changes with StatReloader
+[INFO    :             django.server] - 2024-01-18 17:20:07,233 : log_message @0212: "GET / HTTP/1.1" 200 20
+[WARNING :            django.request] - 2024-01-18 17:20:07,609 : log_response @0241: Not Found: /favicon.ico
+[WARNING :             django.server] - 2024-01-18 17:20:07,610 : log_message @0212: "GET /favicon.ico HTTP/1.1" 404 2269
+[INFO    :             django.server] - 2024-01-18 17:20:10,402 : log_message @0212: "GET / HTTP/1.1" 200 20
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:22:38,948 : trigger_reload @0266: C:\Users\User\Desktop\django\app1\urls.py changed, reloading.
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:22:39,804 : run_with_reloader @0668: Watching for file changes with StatReloader
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:22:43,482 : trigger_reload @0266: C:\Users\User\Desktop\django\app1\views.py changed, reloading.
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:22:44,265 : run_with_reloader @0668: Watching for file changes with StatReloader
+[INFO    :             django.server] - 2024-01-18 17:22:48,784 : log_message @0212: "GET / HTTP/1.1" 200 20
+[INFO    :             django.server] - 2024-01-18 17:22:53,331 : log_message @0212: "GET / HTTP/1.1" 200 20
+[INFO    :             django.server] - 2024-01-18 17:22:54,283 : log_message @0212: "GET / HTTP/1.1" 200 20
+[INFO    :             django.server] - 2024-01-18 17:23:19,675 : log_message @0212: "GET /index_home HTTP/1.1" 301 0
+[INFO    :             django.server] - 2024-01-18 17:23:19,680 : log_message @0212: "GET /index_home/ HTTP/1.1" 200 279
+[INFO    :             django.server] - 2024-01-18 17:23:40,959 : log_message @0212: "GET /about/ HTTP/1.1" 200 338
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:25:54,537 : trigger_reload @0266: C:\Users\User\Desktop\django\app1\views.py changed, reloading.
+[INFO    :   django.utils.autoreload] - 2024-01-18 17:25:55,330 : run_with_reloader @0668: Watching for file changes with StatReloader
