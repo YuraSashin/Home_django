@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Товары, заказанные клиентом {{ client.name }}</h1>
+    <h2>За последние 7 дней:</h2>
+    <ul>
+    {% for product in products_7_days %}
+        <li>Сыр, добавлен: 2024-01-19</li>
+        <li>Колбаса, добавлен: 2024-01-19</li>
+        <li>Молоко, добавлено: 2024-01-18</li>
+    {% endfor %}
+    </ul>
+
+    <h2>За последние 30 дней:</h2>
+    <ul>
+    {% for product in products_30_days %}
+        <li>Сыр, добавлен: 2024-01-09</li>
+        <li>Колбаса, добавлен: 2024-01-09</li>
+        <li>Молоко, добавлено: 2024-01-01</li>
+    {% endfor %}
+    </ul>
+
+    <h2>За последние 365 дней:</h2>
+    <ul>
+    {% for product in products_365_days %}
+        <li>Сыр, добавлен: 2023-09-20</li>
+        <li>Чипсы, добавлено: 2023-09-20</li>
+        <li>Крупа, добавлено: 2023-07-19</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

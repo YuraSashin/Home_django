@@ -52,3 +52,4 @@ class Order(models.Model):
 
     def __str__(self) -> str:
         return f'{self.client.name} ordered {self.product} = {self.order_sum}, order date: {self.order_date}'
+    
