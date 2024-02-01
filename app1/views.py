@@ -11,9 +11,12 @@
 
 from django.http import HttpResponse, HttpRequest
 import logging
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Client, Order, Product
 from datetime import datetime, timedelta
+from .forms import ProductForm, ImageForm
+from django.core.files.storage import FileSystemStorage
+from django import forms
 
 logger = logging.getLogger(__name__)
 
@@ -88,3 +91,32 @@ def client_products(request, client_id):
         'products_year': client.order_set.filter(order_date__range=[year_ago, datetime.now()]).values('products__name', 'products__added_date')
     }
     return render(request, 'products_client.html', context)
+
+
+# Измените модель продукта, добавьте поле для хранения фотографии продукта.
+# Создайте форму, которая позволит сохранять фото.
+
+def edit_product(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('product_detail', product_id=product_id)
+    else:
+        form = ProductForm(instance=product)
+    return render(request, 'edit_product.html', {'form': form})
+
+class ImageForm(forms.Form):
+    image = forms.ImageField()
+
+def upload_image(request):
+    if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            image = form.cleaned_data['image']
+            fs = FileSystemStorage()
+            fs.save(image.name, image)
+    else:
+        form = ImageForm()
+    return render(request, 'upload_image.html', {'form': form})

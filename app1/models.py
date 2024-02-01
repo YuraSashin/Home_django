@@ -15,6 +15,7 @@ from django.db import models
 # — адрес клиента
 # — дата регистрации клиента
 class Client(models.Model):
+    objects = None
     name = models.CharField(max_length=50)
     email = models.EmailField()
     phone = models.CharField(max_length=100)
@@ -45,6 +46,7 @@ class Product(models.Model):
 # — общая сумма заказа
 # — дата оформления заказа
 class Order(models.Model):
+    objects = None
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     order_sum = models.DecimalField(max_digits=10, decimal_places=2)
@@ -53,3 +55,6 @@ class Order(models.Model):
     def __str__(self) -> str:
         return f'{self.client.name} ordered {self.product} = {self.order_sum}, order date: {self.order_date}'
     
+    def __init__(self, *args, **kwargs):
+        super().__init__(args, kwargs)
+        self.id = None
